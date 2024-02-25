@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="info.css">
+    <link rel="stylesheet" href="modal.css">
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <nav class="nav">
+          <div class="search">
+            <input type="text" placeholder="Пошук">
+          </div>
+          <ul class="list">
+            <li class="element"><a href="./index.html">Головна</a></li>
+            <li class="element"><a href="./news.html">Новини</a></li>
+            <li class="element"><a href="./info.html" class="active">Інформація</a></li>
+            <li class="element"><a href="javascript:void(0);" onclick="openRegistrationForm()">Ваш кабінет</a></li>
+          </ul>
+        <div class="dropdown">
+          <button class="dropbtn">Країна</button>
+          <div class="dropdown-content">
+            <a href="#">Україна</a>
+            <a href="#">Сполучені Штати Коломиї</a>
+            <a href="#">Польща</a>
+          </div>
+          <div id="registrationModal" class="modal">
+            <div class="modal-content">
+              <span class="close" onclick="closeRegistrationForm()">&times;</span>
+              <form action="form_processing_resource.php" method="post">
+                <!-- Ваші поля форми тут -->
+                <div class="form-group">
+                  <label for="name">Ім'я:</label>
+                  <input type="text" id="name" name="name" required>
+                </div>
+      
+                <div class="form-group">
+                  <label for="surname">Прізвище:</label>
+                  <input type="text" id="surname" name "surname" required>
+                </div>
+      
+                <div class="form-group">
+                  <label for="email">Електронна пошта:</label>
+                  <input type="email" id="email" name="email" required>
+                </div>
+      
+                <div class="form-group">
+                  <label for="password">Пароль:</label>
+                  <input type="password" id="password" name="password" required>
+                </div>
+      
+                <div class="form-group">
+                  <label for="password_confirmation">Підтвердження паролю:</label>
+                  <input type="password" id="password_confirmation" name="password_confirmation" required>
+                </div>
+                <div class="form-group">
+                  <input type="submit" value="Надіслати">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        </nav>
+      </header>
+      <main>
+        <h1>Наші відвідувачі</h1>
+        <h2>Пси</h2>
+        <!-- <img src="1doggo.png" alt="Doggos Image" class="doggos-image"> -->
+        
+
+        <div class="dogs">
+          <div class="dog">
+            <img class="card-img" src="./psy/pes1.jpeg" alt="pes">
+            <h3 class="card-name">Бабай</h3>
+          </div>
+
+          <div class="dog">
+            <img class="card-img" src="./psy/pes2.jpeg" alt="pes">
+            <h3 class="card-name">Небіс</h3>
+          </div>
+
+          <div class="dog">
+            <img class="card-img" src="./psy/pes3.jpg" alt="pes">
+            <h3 class="card-name">Гоша</h3>
+          </div>
+
+          <div class="dog">
+            <img class="card-img" src="./psy/pes4.png" alt="pes">
+            <h3 class="card-name">Вуйко</h3>
+          </div>
+
+          <div class="dog">
+            <img class="card-img" src="./psy/pes5.jpg" alt="pes">
+            <h3 class="card-name">Лампас</h3>
+          </div>
+
+          <div class="dog">
+            <img class="card-img" src="./psy/pes6.jpg" alt="pes">
+            <h3 class="card-name">Кулініч</h3>
+          </div>
+        </div>
+
+        <!-- <img src="cawt.png" alt="Doggos Image" class="cawts-image"> -->
+        <h2>Котяри</h2>
+
+        <div class="cats">
+          <div class="cat">
+            <img class="card-img" src="cawts\boogacawt.png" alt="pes">
+            <h3 class="card-name">Шугайстер</h3>
+          </div>
+
+          <div class="cat">
+            <img class="card-img" src="cawts\cawtooga.jpeg" alt="pes">
+            <h3 class="card-name">Буґа</h3>
+          </div>
+
+          <div class="cat">
+            <img class="card-img" src="cawts\googacawt.png" alt="pes">
+            <h3 class="card-name">Ґуґа</h3>
+          </div>
+
+          <div class="cat">
+            <img class="card-img" src="cawts\okcat.jpg" alt="pes">
+            <h3 class="card-name">Шляпа</h3>
+          </div>
+
+          <div class="cat">
+            <img class="card-img" src="cawts\omg cat.jpg" alt="pes">
+            <h3 class="card-name">Кубас</h3>
+          </div>
+
+          <div class="cat">
+            <img class="card-img" src="cawts\paskudacat.jpg" alt="pes">
+            <h3 class="card-name">Паскуда</h3>
+          </div>
+        </div>
+        <div class="feedback-form">
+          <h2>Залиште свій відгук</h2>
+          <form action="process_feedback.php" method="post">
+            <div class="form-group">
+              <label for="feedback-author">Ваше ім'я:</label>
+              <input type="text" id="feedback-author" name="feedback-author" required>
+            </div>
+
+            <div class="form-group">
+              <label for="feedback-content">Ваш відгук:</label>
+              <textarea id="feedback-content" name="feedback-content" rows="4" required></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="feedback-rating">Оцінка:</label>
+              <select id="feedback-rating" name="feedback-rating" required>
+                <option value="5">5 зірок</option>
+                <option value="4">4 зірки</option>
+                <option value="3">3 зірки</option>
+                <option value="2">2 зірки</option>
+                <option value="1">1 зірка</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <input type="submit" value="Залишити відгук">
+            </div>
+          </form>
+        </div>
+
+        <div class="reviews">
+          <div class="review">
+            <p><strong>Роман Баребух</strong> - Найкращі послуги за свої гроші!!1!!1 (5 зірок)</p>
+          </div>
+          <div class="review">
+            <p><strong>Іван Кавалок</strong> - Шоб ви скисли всі, ненавиджу вас (1 зірка)</p>
+          </div>
+        </div>
+
+      </main>
+      <footer>
+        <a href="tel:+380660238467" class="phone-number">+380660238467</a>
+        <div class="footer-text">© 2023 ЗооКоломия. Усі права захищені.</div>
+      </footer>
+    </div>
+      </main>
+      <footer>
+        <a href="tel:+380660238467" class="phone-number">+380660238467</a>
+        <div class="footer-text">© 2023 ЗооКоломия. Усі права захищені.</div>
+      </footer>
+    </div>
+  </body>
+</html>
+
+<script>
+  // Функції для відкривання і закривання модального вікна
+  function openRegistrationForm() {
+    document.getElementById('registrationModal').style.display = 'block';
+  }
+
+  function closeRegistrationForm() {
+    document.getElementById('registrationModal').style.display = 'none';
+  }
+</script>

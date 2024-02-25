@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="modal.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="header-container">
+        <div class="search">
+          <input type="text" placeholder="Пошук">
+        </div>
+        <nav class="nav">
+          <ul class="list">
+            <li class="element"><a href="./index.html" class="active">Головна</a></li>
+            <li class="element"><a href="./news.html">Новини</a></li>
+            <li class="element"><a href="./info.html">Інформація</a></li>
+            <li class="element"><a href="javascript:void(0);" onclick="openRegistrationForm()">Ваш кабінет</a></li>
+            <div class="dropdown">
+              <button class="dropbtn">Країна</button>
+              <div class="dropdown-content">
+                <a href="#">Україна</a>
+                <a href="#">Сполучені Штати Коломиї</a>
+                <a href="#">Польща</a>
+              </div>
+            </div>
+            <div id="registrationModal" class="modal">
+              <div class="modal-content">
+                <span class="close" onclick="closeRegistrationForm()">&times;</span>
+                <form action="form_processing_resource.php" method="post">
+                  <!-- Ваші поля форми тут -->
+                  <div class="form-group">
+                    <label for="name">Ім'я:</label>
+                    <input type="text" id="name" name="name" required>
+                  </div>
+        
+                  <div class="form-group">
+                    <label for="surname">Прізвище:</label>
+                    <input type="text" id="surname" name "surname" required>
+                  </div>
+        
+                  <div class="form-group">
+                    <label for="email">Електронна пошта:</label>
+                    <input type="email" id="email" name="email" required>
+                  </div>
+        
+                  <div class="form-group">
+                    <label for="password">Пароль:</label>
+                    <input type="password" id="password" name="password" required>
+                  </div>
+        
+                  <div class="form-group">
+                    <label for="password_confirmation">Підтвердження паролю:</label>
+                    <input type="password" id="password_confirmation" name="password_confirmation" required>
+                  </div>
+                  <div class="form-group">
+                    <input type="submit" value="Надіслати">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+   
+      <div class="news-carousel">
+        <div><img src="psy.png" alt="News 1"></div>
+        <div><img src="baiden.png" alt="News 2"></div>
+        <div><img src="pesgamer.png" alt="News 3"></div>
+        <!-- Додайте інші елементи за необхідністю -->
+      </div>
+      
+      <h1>ЗооКоломия</h1>
+
+      <p>
+        "ЗооКоломия" - це інтернет-зоомагазин, який став дуже популярним серед мешканців Коломії завдяки великому асортименту товарів для домашніх тварин та високому рівню обслуговування клієнтів. Магазин спеціалізується на продажу якісних продуктів для собак, котів, гризунів, птахів і рибок. 
+      </p>
+
+      <p>
+        Ми пропонуємо широкий вибір кормів, аксесуарів, ветеринарних препаратів, а також товарів для грумінгу та догляду за тваринами.
+      </p>
+
+      <h2>Особливості магазину:</h2>
+
+      <p>
+        Широкий асортимент: "ЗооКоломия" пропонує багато різних брендів і видів кормів та аксесуарів, щоб задовольнити потреби різних видів тварин і їх власників.
+                        
+      </p>
+      
+      <p>
+        Доставка: Магазин надає зручну службу доставки товарів до дверей клієнта в місті Коломия та навколишніх районах.
+      </p>
+
+      <p>
+        Консультація та підтримка клієнтів: "ЗооКоломия" забезпечує професійну консультацію щодо вибору правильного харчування і догляду за тваринами. Клієнти можуть отримати поради від досвідчених фахівців.
+      </p>
+
+      <p>
+        Акції та знижки: Магазин регулярно проводить акції та надає знижки на обрані товари, щоб зробити покупки ще більш вигідними для своїх клієнтів.
+      </p>
+
+      <p>
+        Відгуки і рейтинг: "ЗооКоломия" отримав багато позитивних відгуків від задоволених клієнтів та має високий рейтинг в онлайн-спільнотах та соціальних мережах.
+
+      </p>
+
+      <p>
+        "ЗооКоломия" - це надійний і зручний інтернет-зоомагазин, який пропонує великий вибір товарів для тварин та забезпечує високий рівень обслуговування своїх клієнтів.
+      </p>
+    </main>
+  </div>
+
+  <button id="scrollToTopBtn" onclick="scrollToTop()">&#8593;</button>
+  </div>
+
+  <footer>
+    <a href="tel:+380660238467" class="phone-number">+380660238467</a>
+    <div class="footer-text">© 2023 ЗооКоломия. Усі права захищені.</div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          document.getElementById("scrollToTopBtn").style.display = "block";
+        } else {
+          document.getElementById("scrollToTopBtn").style.display = "none";
+        }
+      }
+
+      window.scrollToTop = function () {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      };
+    });
+
+  $(document).ready(function(){
+    $('.news-carousel').slick({
+      centerMode: true,
+      centerPadding: '0px',
+      slidesToShow: 1,
+      arrows: true,
+      prevArrow: '<button type="button" class="slick-prev">Previous</button>',
+      nextArrow: '<button type="button" class="slick-next">Next</button>',
+      dots: true,
+    });
+    
+    setInterval(function() {
+      $('.news-carousel').slick('slickNext');
+    }, 10000);
+  });
+  function openRegistrationForm() {
+        document.getElementById('registrationModal').style.display = 'block';
+      }
+
+      function closeRegistrationForm() {
+        document.getElementById('registrationModal').style.display = 'none';
+      }
+</script>
+</body>
+</html>

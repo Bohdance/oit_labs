@@ -1,0 +1,335 @@
+:root {
+  --primary-bg-color: #aabef7;
+  --header-bg-color: #334155;
+  --text-color: #334155;
+  --nav-link-color: #fff;
+  --active-link-color: #ff9900;
+  --footer-bg-color: #334155;
+  --footer-text-color: #fff;
+  --font-family: Century Gothic, Bold;
+  --font-size-header: 24px;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  background: var(--primary-bg-color);
+  height: 100vh;
+  font-family: var(--font-family);
+}
+
+header {
+  background: var(--header-bg-color);
+  height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 999;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  align-items: center; /* Додано цей рядок */
+}
+
+.list li {
+  margin-right: 60px;
+}
+
+.list a {
+  text-decoration: none;
+  color: var(--nav-link-color);
+  font-size: var(--font-size-header);
+  line-height: 50px;
+  transition: color 0.3s ease; /* Додано цей рядок */
+}
+
+.list a.active,
+.list a:hover {
+  color: var(--active-link-color);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+  padding-bottom: 25vh;
+  color: var(--text-color);
+}
+
+h1 {
+  font-size: 40px;
+  margin-top: 5%;
+  margin-bottom: 0%;
+  background: var(--header-bg-color);
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 10px 20px;
+  display: inline-block;
+}
+
+h2 {
+  font-size: 29.5px;
+  margin-top: 5%;
+  background: var(--header-bg-color);
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 10px 20px;
+  display: inline-block;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--footer-bg-color);
+  width: 100%;
+  height: 60px;
+  color: var(--footer-text-color);
+}
+
+.footer-text {
+  font-weight: bold;
+  margin-right: 20px;
+  font-size: 12px;
+}
+
+.phone-number {
+  margin-left: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--footer-text-color);
+  font-size: 100%;
+}
+
+.img {
+  height: 300px;
+}
+
+.doggos-image {
+  width: 70%;
+  display: block;
+  position: relative;
+  margin-bottom: -40vh;
+  z-index: -1;
+}
+
+.cawts-image {
+  width: 150px;
+  display: block;
+  position: relative;
+  top: 180px;
+  left: 220px;
+}
+
+.dogs, .cats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  width: 60%;
+  margin-bottom: 0%;
+}
+
+.dog {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  padding: 10px;
+  height: 10vw;
+  color: #fff;
+  background: var(--header-bg-color);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.dog:hover {
+  transform: scale(1.1);
+}
+
+.cat {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  height: 10vw;
+  color: #fff;
+  background: var(--header-bg-color);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.cat:hover {
+  transform: scale(1.1);
+}
+
+.card-img {
+  height: 50%;
+  width: 50%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: #334155;
+  color: white;
+  padding: 14px;
+  font-size: var(--font-size-header);
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-family), var(--font-bold);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #ff9900;
+  color: black;
+}
+
+.header-container {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  justify-content: space-between;
+  align-items: center;
+  background: #334155;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+}
+
+.search input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 9vh;
+  right: 2vw;
+  font-size: 1.5rem;
+  background-color: #334155;
+  color: #fff;
+  border: none;
+  border-radius: 10vw;
+  padding: 10px;
+  cursor: pointer;
+  display: none;
+}
+
+#scrollToTopBtn:hover {
+  background-color: white;
+}
+
+.feedback-form {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+}
+
+.feedback-form h2 {
+  margin-bottom: 10px;
+  color: white;
+}
+
+.feedback-form form {
+  display: grid;
+  gap: 10px;
+}
+
+.feedback-form .form-group {
+  display: grid;
+  gap: 5px;
+}
+
+.feedback-form label {
+  font-weight: bold;
+}
+
+.feedback-form textarea {
+  resize: vertical;
+}
+
+/* Додані стилі для відгуків */
+.reviews {
+  margin-top: 30px;
+}
+
+.review {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #e0e0e0;
+  border-radius: 8px;
+}
+
+.review p {
+  margin: 0;
+}
+
+.review strong {
+  color: #333;
+}
